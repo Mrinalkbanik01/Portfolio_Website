@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@800&display=swap');
+.image{
+    object-fit: fill;
+}
+.container-fluid{
+    color:rgb(249,67,124)
+}
+.container-fluid h1,h3{
+    color:rgb(138, 6, 47);
+    font-family: 'Shantell Sans', cursive;
+    text-shadow:#a02404 1px 1px 5px,#cd7159 2px 2px 5px,#FDE6E0 5px 5px 5px;
+}
+h4{
+    font-family: 'Shantell Sans', cursive;
+}
+a{
+    color:rgb(58, 2, 36);
+
+}
+.resume{
+    font-weight: 700;
+}
+.domain{
+    border:6px solid pink; 
+    border-radius:5px;
+    
+}
+.domain:hover{
+    box-shadow:10px 10px 10px rgb(138, 6, 47),-10px -10px 10px rgb(138, 6, 47);
+    transform:translate3d(15px,15px,15px);
+    color: rgb(179, 13, 66);
+}
+svg{
+    color:black;
+}
+.form-control{
+    background-color:#FDE6E0;
+    border:0px;
+    border-bottom: 3px solid rgb(138, 6, 47)
+}
+.form-label{
+      font-size: 25px;
+
+}
+.btn{
+    background-color: #F9437C;
+    color:#FDE6E0;
+}
+.footer{
+    height: 200px;
+    font-size: 25px;
+    background-color:rgb(138, 6, 47);
+    font-family: 'Shantell Sans', cursive;
+    color:#FDE6E0;
+}

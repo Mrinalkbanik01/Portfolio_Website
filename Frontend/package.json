@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "both": "concurrently \"npm run start\"  \"nodemon  Backend/index.js\"",
+    "both": "concurrently \"npm run start\"  \"nodemon  ../Backend/index.js\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

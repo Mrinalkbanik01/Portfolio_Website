@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./component.css";
-
+const seen = new WeakSet();
 
 export default function Forms() {
   
@@ -17,14 +17,22 @@ export default function Forms() {
       email,
       message,
     };
-
+    const jsonString = JSON.stringify(formData, (key, value) => {
+      if (typeof value === 'object' && value !== null) {
+        if (seen.has(value)) {
+          return; // Handle circular reference, omit from JSON
+        }
+        seen.add(value);
+      }
+      return value;
+    });
     try {
       const response = await fetch('http://localhost:6969/message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: jsonString,
       });
 
       // Handle the response from the backend
